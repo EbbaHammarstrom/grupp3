@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.92 48.94">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 26.94px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #e9e0d5;
+        font-family: Futura-Bold, Futura;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: .01em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-size: 14.24px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-1" transform="translate(0 23.62)"><tspan x="0" y="0">N</tspan></text>
+    <text class="cls-1" transform="translate(14.98 39.68)"><tspan x="0" y="0">P</tspan></text>
+    <text class="cls-2" transform="translate(23.91 17.1)"><tspan x="0" y="0">O</tspan><tspan class="cls-4" x="13.17" y="0">R</tspan><tspan class="cls-3" x="23.07" y="0">C</tspan><tspan class="cls-5" x="32.72" y="0">OPIA</tspan></text>
+    <text class="cls-2" transform="translate(33.46 32.68)"><tspan x="0" y="0">ICTURES</tspan></text>
+  </g>
+</svg>

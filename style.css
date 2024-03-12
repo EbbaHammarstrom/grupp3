@@ -1,0 +1,638 @@
+head, body {
+	background-color: #000;
+	margin: 0;
+	font-family: Helvetica;
+	font-weight: 400;
+	color: #EAE0D5;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	line-height: 1.5;
+}
+
+.body{
+  background-image: url("bakgrund.jpg"); /*Photo by Juan Davila on Unsplash, https://unsplash.com/photos/lake-under-blue-sky-during-daytime-P8PlK2nGwqA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash*/
+  background-attachment: fixed;
+  background-color: #22333B;
+  background-size: cover;
+}
+
+
+:root{
+	scroll-behavior: smooth;
+	overscroll-behavior: none;
+}
+
+
+/*meny*/
+
+header{
+  max-height: 70px;
+}
+
+.meny{
+  background-color: #22333B;
+  width: 100%;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logga{
+  margin-top: 7px;
+	margin-left: 20px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+.knappar{
+  padding-right: 25px;
+}
+
+.meny .knappar a{
+  padding-right: 25px;
+  padding-left: 25px;
+  text-decoration: none;
+  font-size: large;
+  color: #EAE0D5;
+}
+
+.meny .knappar a:hover {
+  color: #C6AC8F;
+}
+
+a:hover {
+    color: #C6AC8F;
+}
+
+/*hem*/
+
+.hem{
+	padding: 0px 5% 100px 55%;
+	position: relative;
+	height: 100vh;
+    background-size: cover;
+	display: flex;
+	align-items: center;
+	
+	}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hem-text h1{
+	font-size: 5vw;
+	font-weight: 800;
+	line-height: 1.2;
+	margin-bottom: 1vw;
+	margin-left: -5vw;
+}
+
+.hem-text a{
+  width: 100%;
+  background-color: #22333B;
+  color: #EAE0D5;
+  padding: 1vw 1.5vw;
+  margin: 0.8vw 0;
+  border: none;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  font-size: 1.2vw;
+  margin-left: -5vw;
+  text-decoration: none;
+}
+
+.hem-text a:hover {
+  background-color: #191E26 ;
+}
+
+.stars {
+    display: flex;
+	margin-left: -5vw;
+}
+
+.stars img {
+    margin-right: 1vw; 
+    height: auto;
+}
+
+.genre p{
+	font-size: 1.3vw;
+	line-height: 0.2vw;
+	color: #EAE0D5;
+	margin-bottom: 3vw;
+	margin-top: 2vw;
+	font-weight: bold;
+	margin-left: -5vw;
+}
+
+.time p{
+	font-size: 1.3vw;
+	line-height: 0.2vw;
+	color: #EAE0D5;
+	margin-bottom: 4vw;
+	margin-top: 2vw;
+	margin-left: -5vw;
+}
+
+
+/*info*/
+
+.info {
+	margin: 8.2vw auto;
+	width: 60%;
+}
+
+.info img {
+	float: left;
+	margin-right: 3vw;
+	margin-bottom: 2vw;
+	width: 30vw;
+	height: 40vw;
+}
+
+.text-info {
+	color: #EAE0D5;
+}
+
+.text-info h1 {
+	font-size: 4vw;
+	line-height: 5vw;
+	margin-top: 2vw;
+	margin-bottom: 0.8vw;
+	
+}
+
+.text-info h2 {
+	font-size: 3vw;
+	margin-bottom: 0.8vw;
+}
+
+.text-info h3 {
+	font-size: 2vw; 
+}
+
+.text-info p {
+	font-size: 1.5vw; 
+}
+
+#ch {
+    display: none;
+}
+
+.text-info label {
+  cursor: pointer;
+  width: 100%;
+  background-color: #22333B;
+  color: #EAE0D5;
+  padding: 0.3vw 0.3vw;
+  border: none;
+  border-radius: 0.2vw;
+  font-size: 1vw;
+ 	
+}
+
+.text-info label:hover {
+  background-color: #191E26 ;
+}
+
+
+#ch:checked ~ .more{
+	display: block;
+}
+
+#ch:checked ~ label{
+	display: none;
+}
+
+.more{
+	display: none;
+}
+
+
+/*trailer*/
+
+.youtube-box{
+	margin-top: 10%;
+	z-index: 1;
+	position: absolute;
+	display: flex;
+    justify-content: center;
+	width: 100%; 
+    height: auto;
+}
+
+.youtube-box iframe{
+	width:62.5vw;
+	height:39.8vw;
+    border: 0;
+}
+
+
+/*fog*/
+
+#fog-video {
+ position: relative;
+  bottom: -2.5vw; 
+  z-index: -1;
+	width: 100%;
+	height: auto;
+}
+
+.fog-container a,
+.fog-container p{
+font-size: 0.5vw;
+color: black;
+}
+
+
+
+
+/*Event start*/
+
+.event {
+    height: 100vh;
+    position: relative;
+	margin-bottom: 4vw;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	
+}
+
+.event-content {
+    position: relative;
+    padding-top: 22vw;
+    color: #EAE0D5;
+    text-align: center;
+    font-size: 4vw;
+	font-weight: 800;
+	line-height: 1.2;
+	margin-bottom: 4vw;
+	text-shadow: 1vw 1vw 1.5vw rgba(0, 0, 0, 0.9);
+	
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Event info - om och detaljer*/
+
+.om,
+.detaljer{
+margin: auto;
+margin-bottom: 4.9vw;
+width: 60%;         
+}
+
+.om h1,
+.detaljer h1{
+font-size: 3vw;
+padding-bottom: 1vw;
+border-bottom-style: solid;
+border-bottom-width: 0.3vw;
+line-height: 5vw;
+margin-top: 2vw;
+margin-bottom: 0.8vw;        
+}
+
+.detaljer h2{
+font-size: 2vw;
+margin-bottom: 0.8vw;          
+}
+
+.om p,
+.detaljer p{
+font-size: 1.5vw; 
+margin-bottom: 4vw;
+}
+
+
+/*faq*/
+
+.wrapper {
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 4.9vw;
+}
+
+.wrapper p{
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.wrapper h1 {
+font-size: 3vw;
+padding-bottom: 1vw;
+border-bottom-style: solid;
+border-bottom-width: 0.3vw;
+}
+
+.faq {
+  margin: 0.8vw 0;
+}
+
+.accordion {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  font-size: 1.5vw;
+  width: 100%;
+  padding: 1.5vw 2vw;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion img {
+	max-width: 3vw; 
+    height: auto;
+}
+
+.accordion:hover {
+  background-color: #EAE0D5;
+}
+
+.pannel {
+  padding: 0 2rem 2.5rem 2rem;
+  background-color: #fff;
+  overflow: hidden;
+  display: none;
+}
+
+.pannel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.5vw;
+  line-height: 1.4;
+}
+
+
+/*google maps*/
+.google-map {
+     padding-bottom: 50%;
+	margin-top: 3vw;
+     position: relative;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+
+
+/*formulär*/
+
+.buy-title {
+  max-width: 60%;
+  margin: auto;
+}
+
+.buy-title h1 {
+font-size: 3vw;
+padding-bottom: 1vw;
+border-bottom-style: solid;
+border-bottom-width: 0.3vw;
+}
+
+#formular {
+  width: 60%;
+  padding: 1.5vw;
+  font-size: 1.2vw;
+  margin: auto;
+  margin-top: 1.4vw;
+  margin-bottom: 2.9vw;
+  padding-top: 1.8vw;
+  display: flex; 
+  justify-content: space-between;  
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgba(225, 225, 225, 1.0);
+
+}
+
+#formular .buy{
+  width: 100%; 
+	text-align: right;
+}
+
+#formular input[type=text], 
+#formular input[type=email],
+#formular input[type=tel],
+#formular input[type=number] {
+  width: 100%;
+  padding: 0.8vw 0.5vw;
+  margin: 0.5vw 0 1.1vw 0;
+  display: inline-block;
+  border: 0.08vw solid #ccc;
+  border-radius: 0.5vw;
+  box-sizing: border-box;
+  font-size: 1.2vw;
+}
+
+.mail-list ul {
+  list-style-type: none;
+  padding: 0; 
+  text-align: left;
+}
+
+.mail-list p {
+ text-align: left;
+ margin-bottom: 1vw;
+}
+
+.mail-list li {
+  margin-bottom: 0.8vw;
+}
+
+#formular input[type=submit] {
+  width: 100%;
+  background-color: #22333B;
+  color: rgba(255, 255, 255, 1.00);
+  padding: 1.1vw 1.3vw;
+  margin: 0.8vw 0;
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+#formular input[type=submit]:hover {
+  background-color: #191E26;
+}
+
+
+/*Galleri*/
+
+/*Parent*/
+.generel{
+    display: flex;
+    margin: auto;
+    margin-top: 10vh;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/*children*/
+.boxL, .boxR{
+    width: 210px;
+}
+
+.boxC{
+    flex-grow: 3;
+}
+
+/*Parent*/
+.artiklar{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intervjuer{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+@media (width: 800px) {
+    .artiklar{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+
+/*children*/
+.one, .two, .three, .four{
+    /*border: 2px white solid;*/
+    height: 300px;
+    width: 200px;
+    background-color: #22333B;
+    border-radius: 5px;
+
+}
+
+
+.one:hover, .two:hover, .three:hover, .four:hover{
+    box-shadow: 0px 0px 10px darkgray;
+}
+
+.demo{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: #e9e9e9;
+}
+
+.imageheader{
+    padding-left: 10px;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.imagetext{
+    padding-left: 10px;
+    margin: 0px;
+    font-size: medium;
+    text-decoration: underline;
+	color: #EAE0D5;
+}
+
+.imagetext:hover{
+    color: #C6AC8F;
+}
+
+.carousel img{
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/*footer*/
+
+.footer{
+  padding: 2.6vw 0;
+  text-align: center;
+  background-color: #22333B;
+  color: #EAE0D5;
+   position: relative;
+z-index: 1;
+}
+
+.socials{
+  padding-bottom: 1vw;
+}
+
+.socials a{
+  width: 2.6vw;
+  height: 2.6vw;
+  padding: 1.5vw;
+
+}
+
+.footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.2vw;
+  margin-bottom: 0;
+}
+
+.footer ul li a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer ul li{
+  display: inline-block;
+  padding: 1.5vw;
+  }
+
+.footer ul li a:hover{
+  color: #C6AC8F;
+}
+
+.copyright{
+  font-size: 1vw;
+  margin-top: 2vw;
+
+  }
+
+	
+

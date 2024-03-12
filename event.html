@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Esvent</title>
+</head>
+
+<body>
+	
+	<!--Meny-->
+  <header>
+    <div class="meny">
+                 <img class="image logga" src="icons/logo.svg" alt="norocopia logga">
+        <div class="knappar">
+            <a href="index.html" tabindex="1">Hem</a>
+            <a href="event.html" tabindex="2">Premiär</a>
+            <a href="galleri.html" tabindex="3">Galleri</a>
+        </div>
+    </div>
+</header>
+	
+	
+	<!--Event start-->
+		<div class="event">
+			<video muted loop autoplay>
+				<source src="video/ugglatest.mov" type="video/mp4"><!--https://pixabay.com/videos/owl-bird-wings-feathers-forest-56136/-->
+			</video>
+			<div class="event-content">
+				<h1>PREMIÄR VISNING</h1>
+			</div>
+	    </div>
+	
+	
+	<!--Event info, om och detaljer-->
+	<section id="event.info">
+		<div class="om">
+			<h1>Premiärvisning på Gnema bio</h1>
+			<p>Välkommen till den storslagna premiärvisningen av filmen Legenden om Omma.<br> En glamorös kväll fylld av filmmagi som du inte vill missa! Röda mattan rullas ut kl 19:00 utanför Gnema bio där du innan filmvisningen kan mingla med andra filmälskare och kanske även träffa några av skådespelarna och skaparna bakom filmen.
+ Efter filmvisningen kommer minglet fortsätta med en exklusiv efterfest där det bjuds på massa festligheter, inklusive en läcker middag.
+Så ta på dig dina finaste kläder och upplev en kväll du sent kommer att glömma!
+</p>
+	    </div>
+	
+		<div class="detaljer">
+			<h1>Detaljer</h1>
+			
+			<br><h2>När:</h2>
+			<p>Den 24 Juni 2024<br> Kl 19:00</p>
+			
+			<h2>Var:</h2>
+			<p><strong>GENEMA BIO</strong><br>Storgatan 33<br>60233 NORRKÖPING</p>
+	    </div>
+	</section>
+	
+	<!--faq-->
+	<div class="wrapper">
+      <h1>FAQ</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          Vad kostar biljetterna?
+          <img src="icons/pil.png" alt="Nedåtpil">
+        </button>
+        <div class="pannel">
+          <p>
+            170kr st
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Finns det student erbjudande?
+          <img src="icons/pil.png" alt="Nedåtpil">
+        </button>
+        <div class="pannel">
+          <p>
+          Ja, visa upp giltig studie ID för gratis dryck och snacks.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Hur hittar jag ditt?
+          <img src="icons/pil.png" alt="Nedåtpil">
+        </button>
+        <div class="pannel">
+			<div class="google-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16635.246625102856!2d16.159892939550783!3d58.5886924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46593bca98a8ca73%3A0xbd23eb6778ca7e2b!2sCnema!5e0!3m2!1ssv!2sse!4v1709069817999!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Vem kan jag kontakta vid yttligare frågor?
+          <img src="icons/pil.png" alt="Nedåtpil">
+        </button>
+        <div class="pannel">
+          <p>
+           norcopiapictures@info.com
+          </p>
+        </div>
+      </div>
+	</div>
+	
+  <!--script för faq-->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+	
+	
+	<!--formulär-->
+	<section id="ticket-section">
+	<div class="buy-title">
+		<h1>Köp din biljett här</h1>
+	</div>
+
+	<form name="formular" id="formular" method="post">
+
+		<div class="buy">
+			
+<input type="number" name="biljetter" min="1" max="10" id="biljetter" placeholder="Antal biljetter"><br>		
+
+<input type="text" name="fnamn" id="fnamn" placeholder="Förnamn"><br>
+
+<input type="text" name="enamn" id="enamn" placeholder="Efternamn"><br>
+		
+<input type="tel" name="tel" id="tel" placeholder="Telefon nummer"><br>
+
+<input type="email" name="email" id="email" placeholder="e-postadress">
+	
+<div class="mail-list">
+	<p>Vill du få uppdateringar om eventet via e-post?</p>
+	<ul>
+    <li>
+      <label>
+        <input type="radio" name="list" value="yes" checked>
+        Ja, tack
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="list" value="no">
+        Nej 
+      </label>
+    </li>
+	</ul>
+</div>
+			
+<input type="submit" name="skicka" id="skicka" value="Köp">
+</div>
+</form>
+</section>
+	
+	
+	<!---footer-->	
+<div class="footer">
+	
+	<div class="socials">
+		<a href="#"><img src="icons/instagram.png" alt="Instagram" style="width:3vw;height:3vw;"></a>
+		<a href="#"><img src="icons/facebook.png" alt="Facebook" style="width:3vw;height:3vw;"></a>
+		<a href="#"><img src="icons/youtube.png" alt="Youtube" style="width:3vw;height:3vw;"></a>
+	</div>
+	
+	
+	<ul class="list">
+		<li>
+		<a href="#">Hem</a>
+		</li>
+		
+		<li>
+		<a href="#">Om oss</a>
+		</li>
+		
+		<li>
+		<a href="#">Kontakt</a>
+		</li>
+		
+		<li>
+		<a href="#">Hjälp</a>
+		</li>
+		
+		<li>
+		<a href="#">Policy</a>
+		</li>
+		
+		</ul>
+	<p class="copyright">
+NORCOPIA PICTURES @ 2024
+	</p>
+	
+</div>
+
+	
+</body>
+
+</html>
+
+
